@@ -1,0 +1,10 @@
+[Unit]
+Description=Enable wakeup events on startup
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+ExecStart=/bin/bash /etc/systemd/system/SteamDeckUSBWake.sh
+
+[Install]
+WantedBy=multi-user.target
